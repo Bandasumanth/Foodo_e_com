@@ -1,0 +1,52 @@
+/* Center the form */
+.register-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+  }
+  
+  /* Larger box styling */
+  .register-form {
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  /* Inputs - larger and bolder */
+  .register-form input {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Button - more visible */
+  .register-form button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #f9a600;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .register-form button:hover {
+    background-color: #7fd605;
+  }
+  
+  /* Heading - larger font */
+  .register-form h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
