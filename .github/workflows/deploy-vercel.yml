@@ -1,0 +1,33 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main   # 👈 Change this to your branch name if not using "main"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}   # 👈 You must set this in GitHub repo secrets
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }} # 👈 From Vercel settings
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} # 👈 From Vercel settings
+          working-directory: ./
